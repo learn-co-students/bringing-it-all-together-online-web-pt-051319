@@ -62,7 +62,8 @@ class Dog
   end
   
   def self.find_or_create_by(dog_hash)
-    self.create(dog_hash)
+    name = dog_hash[:name]
+    self.find_by_name(name) 
     binding.pry
   end
   
