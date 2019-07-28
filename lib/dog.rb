@@ -1,4 +1,4 @@
-class Dog
+lclass Dog
   
   attr_accessor :name, :breed, :id
   
@@ -63,8 +63,7 @@ class Dog
   
   def self.find_or_create_by(dog_hash)
     name = dog_hash[:name]
-    self.find_by_name(name) 
-    binding.pry
+    self.create(dog_hash)
   end
   
 end
